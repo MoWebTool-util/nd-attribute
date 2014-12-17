@@ -1,6 +1,6 @@
 {
   "name": "nd-attribute",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "提供基本的属性添加、获取、移除等功能。",
   "keywords": [],
   "homepage": "https://github.com/ndfront/nd-attribute",

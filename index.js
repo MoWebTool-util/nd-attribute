@@ -285,6 +285,11 @@ function parseEventsFromAttrs(host, attrs) {
     if (attrs.hasOwnProperty(key)) {
       var value = attrs[key].value, m;
 
+      // callback 可以是字符串，表示当前实例上的方法名
+      if (isString(value)) {
+        value = host[value];
+      }
+
       if (isFunction(value) && (m = key.match(EVENT_PATTERN))) {
         host[m[1]](getEventName(m[2]), value);
         delete attrs[key];
