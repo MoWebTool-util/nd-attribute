@@ -421,11 +421,11 @@ exports.initAttrs = function(config) {
   // 对于有 setter 的属性，要用初始值 set 一下，以保证关联属性也一同初始化
   setSetterAttrs(this, attrs, config);
 
-  // Convert `on/before/afterXxx` config to event handler.
-  parseEventsFromAttrs(this, attrs);
-
   // 将 this.attrs 上的 special properties 放回 this 上
   copySpecialProps(specialProps, this, attrs, true);
+
+  // Convert `on/before/afterXxx` config to event handler.
+  parseEventsFromAttrs(this, attrs);
 };
 
 
