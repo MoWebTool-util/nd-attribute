@@ -440,6 +440,11 @@ exports.get = function(key) {
 // Set a hash of model attributes on the object, firing `"change"` unless
 // you choose to silence it.
 exports.set = function(key, val, options) {
+  // 实例不存在 attrs 属性
+  if (!this.hasOwnProperty('attrs')) {
+    return this;
+  }
+
   var attrs = {};
 
   // set("key", val, options)
