@@ -11,9 +11,6 @@
 
 /*jshint maxparams:4 */
 
-// Helpers
-// -------
-
 var toString = Object.prototype.toString;
 var hasOwn = Object.prototype.hasOwnProperty;
 
